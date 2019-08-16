@@ -1,0 +1,38 @@
+apiVersion: v1
+data:
+  spark.properties: |
+    #Java properties built from Kubernetes config map with name: spark-new-1565944221737-driver-conf-map
+    #Fri Aug 16 16:30:23 CST 2019
+    spark.driver.host=spark-new-1565944221737-driver-svc.dev.svc
+    spark.driver.blockManager.port=7079
+    spark.kubernetes.executor.podNamePrefix=spark-new-1565944221737
+    spark.kubernetes.container.image=registry-vpc.cn-hangzhou.aliyuncs.com/eigenlab/spark-official\:2.4.3
+    spark.jars=/opt/spark/examples/jars/spark-examples_2.11-2.4.3.jar
+    spark.kubernetes.submitInDriver=true
+    spark.kubernetes.container.image.pullPolicy=Always
+    spark.submit.deployMode=cluster
+    spark.kubernetes.resource.type=java
+    spark.kubernetes.python.pyFiles=
+    spark.master=k8s\://https\://test-cluster.master.k8s.aipp.io\:6443
+    spark.kubernetes.authenticate.driver.serviceAccountName=spark
+    spark.kubernetes.container.image.pullSecrets=aliyun-registry
+    spark.kubernetes.driver.pod.name=spark-new-1565944221737-driver
+    spark.executor.instances=1
+    spark.kubernetes.namespace=dev
+    spark.app.id=spark-122edf4ab1aa4cba8cc3fd2877f1218e
+    spark.app.name=spark-new
+    spark.driver.port=7078
+kind: ConfigMap
+metadata:
+  creationTimestamp: 2019-08-16T08:30:24Z
+  name: spark-new-1565944221737-driver-conf-map
+  namespace: dev
+  ownerReferences:
+  - apiVersion: v1
+    controller: true
+    kind: Pod
+    name: spark-new-1565944221737-driver
+    uid: 17526233-c000-11e9-adb1-00163e20c49c
+  resourceVersion: "9371555"
+  selfLink: /api/v1/namespaces/dev/configmaps/spark-new-1565944221737-driver-conf-map
+  uid: 17aae039-c000-11e9-adb1-00163e20c49c
