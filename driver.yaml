@@ -7,10 +7,10 @@ metadata:
   labels:
     spark-app-selector: spark-appid-1
     spark-role: driver
-  name: spark-new-1565944221737-driver
+  name: spark-appname-1
   namespace: dev
   resourceVersion: "9371596"
-  selfLink: /api/v1/namespaces/dev/pods/spark-new-1565944221737-driver
+  selfLink: /api/v1/namespaces/dev/pods/spark-appname-1
   uid: 17526233-c000-11e9-adb1-00163e20c49c
 spec:
   containers:
@@ -84,7 +84,7 @@ spec:
     name: spark-local-dir-1
   - configMap:
       defaultMode: 420
-      name: spark-new-1565944221737-driver-conf-map
+      name: spark-appname-1-conf-map
     name: spark-conf-volume
   - name: spark-token-ssbkt
     secret:
