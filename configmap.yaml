@@ -19,7 +19,7 @@ data:
     spark.kubernetes.driver.pod.name=spark-new-1565944221737-driver
     spark.executor.instances=1
     spark.kubernetes.namespace=dev
-    spark.app.id=spark-122edf4ab1aa4cba8cc3fd2877f1218e
+    spark.app.id=spark-appid-1
     spark.app.name=spark-new
     spark.driver.port=7078
 kind: ConfigMap

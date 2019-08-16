@@ -25,7 +25,7 @@ spec:
     protocol: TCP
     targetPort: 7079
   selector:
-    spark-app-selector: spark-122edf4ab1aa4cba8cc3fd2877f1218e
+    spark-app-selector: spark-appid-1
     spark-role: driver
   sessionAffinity: None
   type: ClusterIP

@@ -5,7 +5,7 @@ metadata:
     cni.projectcalico.org/podIP: 20.100.2.163/32
   creationTimestamp: 2019-08-16T08:30:23Z
   labels:
-    spark-app-selector: spark-122edf4ab1aa4cba8cc3fd2877f1218e
+    spark-app-selector: spark-appid-1
     spark-role: driver
   name: spark-new-1565944221737-driver
   namespace: dev
