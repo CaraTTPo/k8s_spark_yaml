@@ -9,7 +9,7 @@ metadata:
     controller: true
     kind: Pod
     name: spark-appname-1
-    uid: 17526233-c000-11e9-adb1-00163e20c49c
+    uid: spark-poduid-1
   resourceVersion: "9371553"
   selfLink: /api/v1/namespaces/dev/services/spark-appname-1-svc
   uid: 17a60aad-c000-11e9-adb1-00163e20c49c

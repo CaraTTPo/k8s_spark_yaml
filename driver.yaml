@@ -11,7 +11,7 @@ metadata:
   namespace: dev
   resourceVersion: "9371596"
   selfLink: /api/v1/namespaces/dev/pods/spark-appname-1
-  uid: 17526233-c000-11e9-adb1-00163e20c49c
+  uid: spark-poduid-1
 spec:
   containers:
   - args:

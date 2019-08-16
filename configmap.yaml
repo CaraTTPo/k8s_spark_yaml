@@ -32,7 +32,7 @@ metadata:
     controller: true
     kind: Pod
     name: spark-appname-1
-    uid: 17526233-c000-11e9-adb1-00163e20c49c
+    uid: spark-poduid-1
   resourceVersion: "9371555"
   selfLink: /api/v1/namespaces/dev/configmaps/spark-appname-1-conf-map
   uid: 17aae039-c000-11e9-adb1-00163e20c49c
