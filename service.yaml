@@ -8,7 +8,7 @@ metadata:
     controller: true
     kind: Pod
     name: spark-appname-1
-    uid: 98a7531c-c028-11e9-adb1-00163e20c49c
+    uid: 54990c79-c22e-11e9-adb1-00163e20c49c
   selfLink: /api/v1/namespaces/dev/services/spark-appname-1-svc
 spec:
   clusterIP: None

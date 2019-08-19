@@ -30,4 +30,4 @@ metadata:
   - apiVersion: v1
     kind: Pod
     name: spark-appname-1
-    uid: 98a7531c-c028-11e9-adb1-00163e20c49c
+    uid: 54990c79-c22e-11e9-adb1-00163e20c49c

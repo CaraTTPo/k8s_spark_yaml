@@ -7,13 +7,12 @@ metadata:
   name: spark-appname-1
   namespace: dev
   selfLink: /api/v1/namespaces/dev/pods/spark-appname-1
-  uid: spark-poduid-1
 spec:
   containers:
   - args:
     - driver
     - --properties-file
-    - /opt/spark/conf/spark.properties
+    - /opt/spark/work-dir/conf/spark.properties
     - --class
     - org.apache.spark.examples.SparkPi
     - spark-internal
@@ -27,7 +26,9 @@ spec:
       value: /var/data/spark-2befb15a-debe-4f61-b9cc-3811806d9851
     - name: SPARK_CONF_DIR
       value: /opt/spark/conf
-    image: registry-vpc.cn-hangzhou.aliyuncs.com/eigenlab/spark-official:2.4.3
+    - name: HADOOP_CONF_DIR
+      value: /opt/hadoop/conf
+    image: registry-vpc.cn-hangzhou.aliyuncs.com/eigenlab/pyspark-gevent-k8s:2.4.3
     imagePullPolicy: Always
     name: spark-kubernetes-driver
     ports:
@@ -53,6 +54,10 @@ spec:
       name: spark-local-dir-1
     - mountPath: /opt/spark/conf
       name: spark-conf-volume
+    - mountPath: /opt/hadoop/conf
+      name: hadoop-conf-volume
+    - mountPath: /opt/spark/work-dir/conf/
+      name: user-conf
     - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
       name: spark-token-ssbkt
       readOnly: true
@@ -79,9 +84,17 @@ spec:
   - emptyDir: {}
     name: spark-local-dir-1
   - configMap:
+      defaultMode: 444
+      name: eigen-spark-conf
+    name: spark-conf-volume
+  - configMap:
+      defaultMode: 444
+      name: eigen-hadoop-conf
+    name: hadoop-conf-volume
+  - configMap:
       defaultMode: 420
       name: spark-appname-1-conf-map
-    name: spark-conf-volume
+    name: user-conf
   - name: spark-token-ssbkt
     secret:
       defaultMode: 420
