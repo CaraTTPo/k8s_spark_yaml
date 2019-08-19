@@ -5,7 +5,7 @@ data:
     #Fri Aug 16 16:30:23 CST 2019
     spark.driver.host=spark-appname-1-svc.dev.svc
     spark.driver.blockManager.port=7079
-    spark.kubernetes.executor.podNamePrefix=spark-new-1565944221737
+    spark.kubernetes.executor.podNamePrefix=spark-appname-1
     spark.kubernetes.container.image=registry-vpc.cn-hangzhou.aliyuncs.com/eigenlab/spark-official\:2.4.3
     spark.jars=/opt/spark/examples/jars/spark-examples_2.11-2.4.3.jar
     spark.kubernetes.submitInDriver=true
@@ -20,19 +20,14 @@ data:
     spark.executor.instances=1
     spark.kubernetes.namespace=dev
     spark.app.id=spark-appid-1
-    spark.app.name=spark-new
+    spark.app.name=spark-appname-1
     spark.driver.port=7078
 kind: ConfigMap
 metadata:
-  creationTimestamp: 2019-08-16T08:30:24Z
   name: spark-appname-1-conf-map
   namespace: dev
   ownerReferences:
   - apiVersion: v1
-    controller: true
     kind: Pod
     name: spark-appname-1
-    uid: spark-poduid-1
-  resourceVersion: "9371555"
-  selfLink: /api/v1/namespaces/dev/configmaps/spark-appname-1-conf-map
-  uid: 17aae039-c000-11e9-adb1-00163e20c49c
+    uid: 98a7531c-c028-11e9-adb1-00163e20c49c

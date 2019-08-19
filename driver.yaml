@@ -1,15 +1,11 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  annotations:
-    cni.projectcalico.org/podIP: 20.100.2.163/32
-  creationTimestamp: 2019-08-16T08:30:23Z
   labels:
     spark-app-selector: spark-appid-1
     spark-role: driver
   name: spark-appname-1
   namespace: dev
-  resourceVersion: "9371596"
   selfLink: /api/v1/namespaces/dev/pods/spark-appname-1
   uid: spark-poduid-1
 spec:
@@ -90,39 +86,3 @@ spec:
     secret:
       defaultMode: 420
       secretName: spark-token-ssbkt
-status:
-  conditions:
-  - lastProbeTime: null
-    lastTransitionTime: 2019-08-16T08:30:23Z
-    reason: PodCompleted
-    status: "True"
-    type: Initialized
-  - lastProbeTime: null
-    lastTransitionTime: 2019-08-16T08:30:35Z
-    reason: PodCompleted
-    status: "False"
-    type: Ready
-  - lastProbeTime: null
-    lastTransitionTime: 2019-08-16T08:30:23Z
-    status: "True"
-    type: PodScheduled
-  containerStatuses:
-  - containerID: docker://fc75575808491c721c29cbdd5eb82a7e61e9938a00898b0c35dce199ef574a21
-    image: registry-vpc.cn-hangzhou.aliyuncs.com/eigenlab/spark-official:2.4.3
-    imageID: docker-pullable://registry-vpc.cn-hangzhou.aliyuncs.com/eigenlab/spark-official@sha256:9c5c4731f49ca29f72c530981bb6d1f381de698acfe7f8dd87b5945813ee93b6
-    lastState: {}
-    name: spark-kubernetes-driver
-    ready: false
-    restartCount: 0
-    state:
-      terminated:
-        containerID: docker://fc75575808491c721c29cbdd5eb82a7e61e9938a00898b0c35dce199ef574a21
-        exitCode: 0
-        finishedAt: 2019-08-16T08:30:35Z
-        reason: Completed
-        startedAt: 2019-08-16T08:30:25Z
-  hostIP: 10.10.80.111
-  phase: Succeeded
-  podIP: 20.100.2.163
-  qosClass: Burstable
-  startTime: 2019-08-16T08:30:23Z
